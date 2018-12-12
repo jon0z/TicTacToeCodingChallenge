@@ -6,6 +6,24 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * Board class specifications
+ *
+ *      Default 4x4 board with support for larger grid sizes.
+ *          - Rows and Columns must be greater than 3
+ *          - Rows must equal Columns
+ *
+ *      Board keeps track of players' moves
+ *
+ *      newGame() - Starts/Restarts a new game by clearing board
+ *
+ *      play() - Makes player mover if space is available
+ *
+ *      checkWin() - Checks for a win with
+ *
+ *      didGameEnd() - keeps track of game ended flag
+ *
+ */
 public class Board {
 
     private int numRows;
@@ -219,7 +237,6 @@ public class Board {
         }
 
         return checkCount == 4;
-
     }
 
     public boolean checkRows(){
@@ -298,7 +315,6 @@ public class Board {
         } else{
             return false;
         }
-
     }
 
     public int[] getLeftDiagonal(){
